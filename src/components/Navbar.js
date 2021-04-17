@@ -40,12 +40,11 @@ const MenuBars = styled.i``;
 const NavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-right: -40px;
+    margin-right: -48px;
 `;
 
 const NavMenuLinks = styled(Link)`
     ${NavLink};
-    padding-left: 90px;
 
 `;
 
