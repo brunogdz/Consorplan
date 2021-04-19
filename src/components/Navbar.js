@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import './Navbar.css';
 import { MenuData } from '../data/MenuData';
 import { Button } from './Button';
+import {FaBars} from 'react-icons/fa';
 // cores que possam ser usadas
 // #3862D6
 const Nav = styled.nav`
@@ -36,11 +37,25 @@ const Logo = styled(Link)`
 
 
 
-const MenuBars = styled.i``;
+const MenuBars = styled(FaBars)`
+    display: none;
+
+    @media screen and (max-width: 768px){
+        display: block;
+        background-size: contain;]
+        height: 40px;
+        width: 40px;
+    } 
+`;
+
 const NavMenu = styled.div`
     display: flex;
     align-items: center;
     margin-right: -48px;
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
 `;
 
 const NavMenuLinks = styled(Link)`
@@ -52,7 +67,10 @@ const NavBtn = styled.div`
     display: flex;
     align-items: center;
     margin-right: 24px;
-   
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
 `;
 
 const Navbar = () => {
